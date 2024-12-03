@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Rwanda History Archives</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo" style="font-size: 20px; text-decoration: none;color: white;">
+                        <img src="assets/images/logo.png" alt="" style="height: 50px;">
+                       <!--Rwanda History Archives-->>
+                    </a>
+
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="history.html">History Archives</a></li>
+                        <li><a href="history.html">Login</a></li>
+                        
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+      <!-- ***** Main Content Area Start ***** -->
+  <section class="categories-section py-5">
+    <div class="container">
+      <!-- Category Filters -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">Explore Rwanda History Archives</h2>
+          <div class="btn-group" role="group" aria-label="Categories">
+            <button type="button" class="btn btn-outline-primary" onclick="filterSelection('all')">All</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterSelection('animated')">Animated Videos</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterSelection('oral')">Oral Stories</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterSelection('written')">Written Stories</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="row">
+        <!-- Card for Animated Videos -->
+        <div class="col-lg-4 col-md-6 mb-4 category animated">
+          <div class="card h-100 text-center">
+            <img class="card-img-top" src="assets/images/Animated photo.jpeg.jpg" alt="Animated Videos">
+            <div class="card-body">
+              <h5 class="card-title">Animated Videos</h5>
+              <p class="card-text">Discover Rwanda's rich history through captivating animated videos.</p>
+            </div>
+            <div class="card-footer">
+              <a href="animated-videos.html" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card for Oral Stories -->
+        <div class="col-lg-4 col-md-6 mb-4 category oral">
+          <div class="card h-100 text-center">
+            <img class="card-img-top" src="assets/images/Story telling.jpeg.jpg" alt="Oral Stories">
+            <div class="card-body">
+              <h5 class="card-title">Oral Stories</h5>
+              <p class="card-text">Listen to the oral traditions and stories passed down through generations.</p>
+            </div>
+            <div class="card-footer">
+              <a href="oral-stories.html" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card for Written Stories -->
+        <div class="col-lg-4 col-md-6 mb-4 category written">
+          <div class="card h-100 text-center">
+            <img class="card-img-top" src="assets/images/Archive.jpeg.jpg" alt="Written Stories">
+            <div class="card-body">
+              <h5 class="card-title">Written Stories</h5>
+              <p class="card-text">Read the written accounts and stories documenting Rwanda's past.</p>
+            </div>
+            <div class="card-footer">
+              <a href="written-stories.html" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="row justify-content-center">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Main Content Area End ***** -->
+
+  <script>
+    // Function to filter cards based on category
+    function filterSelection(category) {
+      var cards = document.getElementsByClassName('category');
+      if (category === 'all') category = '';
+      for (var i = 0; i < cards.length; i++) {
+        if (cards[i].className.indexOf(category) > -1) {
+          cards[i].style.display = 'block';
+        } else {
+          cards[i].style.display = 'none';
+        }
+      }
+    }
+
+    // Initially display all categories
+    filterSelection('all');
+  </script>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © <script>document.write(new Date().getFullYear());</script> <a href="#">Rwanda History Archives</a> . All rights reserved. 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    function bannerSwitcher() {
+      next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+      if (next.length) next.prop('checked', true);
+      else $('.sec-1-input').first().prop('checked', true);
+    }
+
+    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+    $('nav .controls label').click(function() {
+      clearInterval(bannerTimer);
+      bannerTimer = setInterval(bannerSwitcher, 5000)
+    });
+  </script>
+
+  </body>
+
+</html>
